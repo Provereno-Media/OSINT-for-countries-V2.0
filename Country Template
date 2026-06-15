@@ -1,0 +1,84 @@
+# OSINT-Tools-COUNTRY NAME
+<img src="LINK-TO-THE-FLAG.PNG" alt="COUNTRY-NAME_FLAG"/>
+A list of OSINT resources and tools that may be useful to you when conducting investigations related to [COUNTRY NAME]. Most of the resources and tools has versions in [LANGUAGES]. [OTHER COMMENTS]
+
+**Last Updated:** DATE 
+
+## Contributions
+Feel free to join this project — [OSINT For Countries V2.0](https://github.com/Provereno-Media/OSINT-for-countries-V2.0)
+
+## Table of contents:
+ - [Open Data portals](#open-data-portals)
+ - [Legal Entities](#legal-entities)
+ - [Cadastral and other Maps](#maps)
+ - [Vehicles](#vehicles)
+ - [People, phones, social etc.](#people)
+ - [Public procurements](#public-procurement)
+ - [WHOIS](#whois)
+ - [Appendix](#appendix) # Add it only if you really have to
+
+## Open Data portals
+(Country Open Data, Stock Exchange, Courts)
+- [Entity 1. 2 etc.]
+
+## Legal Entities
+- [Entity 1. 2 etc.]
+
+## Maps
+(Cadastral Maps if available, GIS etc.)
+- [Entity 1. 2 etc.]
+
+## Vehicles
+- [Entity 1. 2 etc.]
+
+## People 
+(Names, Addresses, Yellow Pages, White Pages etc.)
+- [Entity 1. 2 etc.]
+- Try [OSINT Industries](https://app.osint.industries) and don't forget about the [Digital Profiler's Toolkit](https://github.com/paulpogoda/Digital-Profiler-s-Toolkit)
+
+## Public procurement
+- [Entity 1. 2 etc.]
+
+## Legal Disclaimer
+
+This repository is for educational and legitimate investigative purposes only. Users are responsible for:
+- Complying with all applicable laws and regulations
+- Respecting terms of service for all databases and tools
+- Using information ethically and responsibly
+- Obtaining proper authorization when required
+
+The information provided is for informational purposes only and should not be considered legal advice.
+
+---
+
+**Repository maintained by the OSINT-for-Countries-V2.0 community**
+
+## WHOIS
+- [Entity 1. 2 etc.]
+
+## Appendix
+
+---
+
+## Contributing
+
+To contribute to this repository:
+1. Verify all links are working and accessible
+2. Provide accurate descriptions of database contents
+3. Follow the 7-category structure
+4. Include official government sources when available
+5. Submit pull requests with detailed change descriptions
+
+## Legal Disclaimer
+
+This repository is for educational and legitimate investigative purposes only. Users are responsible for:
+- Complying with all applicable laws and regulations
+- Respecting terms of service for all databases and tools
+- Using information ethically and responsibly
+- Obtaining proper authorization when required
+
+The information provided is for informational purposes only and should not be considered legal advice.
+
+---
+
+**Repository maintained by the OSINT-for-Countries-V2.0 community**
