@@ -2,93 +2,162 @@
 
 ![image](https://github.com/user-attachments/assets/af412678-6d84-40c0-aa99-5041c928e47e)
 
-**This project was inspired by @wddadk [OSINT for Countries](https://github.com/wddadk/OSINT-for-countries). Here you'll find a GitHub-based collection of links to various OSINT tools, websites, and projects that are specific to different countries, structured for fact-checkers and digital profilers. Of course there are a lot of other OSINT collections, but most of them are outdated and abandoned. 
 
-The project objective is to create a community driven, manually tested, standardized collection on GitHub. Thanks Henk van Ess for the [page based on this repo](https://digitaldigging.org/osint/) on his website (you can see it on the picture above).**
+[![Stars](https://img.shields.io/github/stars/Provereno-Media/OSINT-for-countries-V2.0?style=flat-square&color=yellow)](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/stargazers)
+[![Forks](https://img.shields.io/github/forks/Provereno-Media/OSINT-for-countries-V2.0?style=flat-square&color=blue)](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/network/members)
+[![Contributors](https://img.shields.io/github/contributors/Provereno-Media/OSINT-for-countries-V2.0?style=flat-square&color=green)](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/graphs/contributors)
+[![Last Commit](https://img.shields.io/github/last-commit/Provereno-Media/OSINT-for-countries-V2.0?style=flat-square)](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/commits/main)
+[![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue?style=flat-square)](LICENSE)
+[![Countries](https://img.shields.io/badge/Countries-32-orange?style=flat-square)](#table-of-contents)
+[![Categories](https://img.shields.io/badge/Categories%20per%20country-7-purple?style=flat-square)](#what-does-standardized-collection-mean)
+[![Community Driven](https://img.shields.io/badge/Community-Driven-brightgreen?style=flat-square)](CONTRIBUTING.md)
 
-## What does "standardized collection" mean 
-**On each country repo you will find tools and resources grouped by one standard:** 
-- open bases, statistics
-- search for legal and tax information
-- maps and cadastres
-- cars and license plates
-- people: names, public documents, social accounts, telephones and other personal identifiers
-- public procurement
-- WHOIS
+**📊 32 countries · 7 categories per country · Community-driven**
 
-## Contributing
-Feel free to join in! You can create your own repo with the same standard, and we will include it in the list. Examples of standard repo: [Kazakhstan](https://github.com/paulpogoda/OSINT-Tools-Kazakhstan), [United Arab Emirates](https://github.com/paulpogoda/OSINT-Tools-Emirates). Please use the [Country Template](https://github.com/paulpogoda/OSINT-for-countries-V2.0/blob/main/Country%20Template) to work on new standartized repo for this project, add a pull request to contribute. If you have more OSINT resources to add to existing country repos, feel free to submit a pull request at the repo's page. 
-## What is already done?
-See the Table of Contents 
+[About](#about) · [Standard](#what-does-standardized-collection-mean) · [Countries](#table-of-contents) · [Multi-country Resources](#resources-containing-multi-country-links) · [Contributing](#contributing) · [Legal](#legal-disclaimer)
+
+</div>
+
+---
+
+## About
+
+> This project was inspired by [@wddadk — OSINT for Countries](https://github.com/wddadk/OSINT-for-countries). Here you'll find a GitHub-based collection of links to various OSINT tools, websites, and projects that are specific to different countries, structured for **fact-checkers and digital profilers**.
+>
+> Of course there are a lot of other OSINT collections, but most of them are outdated and abandoned. The project objective is to create a **community-driven, manually tested, standardized collection** on GitHub.
+>
+> Thanks to [Henk van Ess](https://digitaldigging.org/osint/) for publishing a page based on this repository on his website.
+
+---
+
+## What does "standardized collection" mean?
+
+On each country repository you will find tools and resources grouped by **one universal standard** of 7 categories:
+
+| # | Category |
+|---|---|
+| 1 | 🗂 Open databases & statistics |
+| 2 | ⚖️ Legal and tax information search |
+| 3 | 🗺 Maps and cadastres |
+| 4 | 🚗 Cars and license plates |
+| 5 | 👤 People: names, public documents, social accounts, phones and other personal identifiers |
+| 6 | 📋 Public procurement |
+| 7 | 🌐 WHOIS |
+
+---
+
+## Quick Start
+
+**New to this project?** Here's how to get going:
+
+1. **Browse** — Pick a country from the [Table of Contents](#table-of-contents) below and open its repository
+2. **Use the template** — To add a new country, copy the [Country Template](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/blob/main/Country%20Template) and structure your file using the 7-category standard
+3. **Contribute** — Submit a pull request to this index repo to add your country, or to a country repo to add/fix tools
+4. **Report broken links** — Open an [Issue](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/issues) if you find a dead link
+
+---
 
 ## Table of Contents
-- [Armenia](https://github.com/paulpogoda/OSINT-Tools-Armenia/)
-- [Australia](https://github.com/paulpogoda/OSINT-Tools-Australia/)
-- [Azerbaijan](https://github.com/paulpogoda/OSINT-Tools-Azerbaijan/)
-- [Bangladesh](https://github.com/seotausif/OSINT-Tools-Bangladesh) by Tausif Akbar | [Forked and updated by Pogoda](https://github.com/paulpogoda/OSINT-Tools-Bangladesh)
-- [Belarus](https://github.com/paulpogoda/OSINT-Tools-Belarus)
-- [Brazil](https://github.com/bgmello/OSINT-Tools-Brazil/) by Bruno Görresen Mello
-- [Bulgaria](https://github.com/paulpogoda/OSINT-Tools-Bulgaria/tree/main)
-- [China](https://github.com/paulpogoda/OSINT-Tools-China)
-- [Cuba](https://github.com/paulpogoda/osint-tools-cuba/tree/main)
-- [Estonia](https://github.com/paulpogoda/OSINT-Tools-Estonia)
-- [France](https://github.com/Aegyr21/OSINT-Tools-France/)
-- [India](https://github.com/paulpogoda/OSINT-Tools-India)
-- [Iran](https://github.com/paulpogoda/OSINT-Tools-Iran)
-- [Iraq](https://github.com/paulpogoda/OSINT-Tools-Iraq)
-- [Israel](https://github.com/paulpogoda/OSINT-Tools-Israel)
-- [Kazakhstan](https://github.com/paulpogoda/OSINT-Tools-Kazakhstan)
-- [Kyrgyzstan](https://github.com/paulpogoda/OSINT-Tools-Kyrgyzstan)
-- [Latvia](https://github.com/paulpogoda/OSINT-Tools-Latvia)
-- [Lithuania](https://github.com/paulpogoda/OSINT-Tools-Lithuania)
-- [Netherlands](https://github.com/paulpogoda/OSINT-Tools-Netherlands/tree/master)
-- [North Korea](https://github.com/paulpogoda/OSINT-Tools-North-Korea)
-- [Poland](https://github.com/paulpogoda/OSINT-Tools-Poland)
-- [Russia](https://github.com/paulpogoda/OSINT-Tools-Russia)
-- [Saudi Arabia](https://github.com/paulpogoda/OSINT-Tools-Saudi-Arabia)
-- [Syria](https://github.com/paulpogoda/OSINT-Tools-Syria)
-- [Taiwan](https://github.com/paulpogoda/OSINT-Tools-Taiwan)
-- [Tajikistan](https://github.com/paulpogoda/OSINT-Tools-Tajikistan)
-- [United Arab Emirates](https://github.com/paulpogoda/OSINT-Tools-Emirates)
-- [United Kingdom](https://github.com/paulpogoda/OSINT-Tools-UK)
-- [United States of America](https://github.com/paulpogoda/OSINT-Tools_USA)
-- [Uzbekistan](https://github.com/paulpogoda/OSINT-Tools-Uzbekistan)
+
+> 🌍 **32 countries** currently indexed. [Want to add yours?](#contributing)
+
+| Country | Maintainer | Status |
+|---|---|---|
+| 🇦🇲 [Armenia](https://github.com/paulpogoda/OSINT-Tools-Armenia/) | @paulpogoda | ✅ Active |
+| 🇦🇺 [Australia](https://github.com/paulpogoda/OSINT-Tools-Australia/) | @paulpogoda | ✅ Active |
+| 🇦🇿 [Azerbaijan](https://github.com/paulpogoda/OSINT-Tools-Azerbaijan/) | @paulpogoda | ✅ Active |
+| 🇧🇩 [Bangladesh](https://github.com/seotausif/OSINT-Tools-Bangladesh) | Tausif Akbar · [Fork by Pogoda](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) | ✅ Active |
+| 🇧🇾 [Belarus](https://github.com/paulpogoda/OSINT-Tools-Belarus) | @paulpogoda | ✅ Active |
+| 🇧🇷 [Brazil](https://github.com/bgmello/OSINT-Tools-Brazil/) | Bruno Görresen Mello | ✅ Active |
+| 🇧🇬 [Bulgaria](https://github.com/paulpogoda/OSINT-Tools-Bulgaria/tree/main) | @paulpogoda | ✅ Active |
+| 🇨🇳 [China](https://github.com/paulpogoda/OSINT-Tools-China) | @paulpogoda | ✅ Active |
+| 🇨🇺 [Cuba](https://github.com/paulpogoda/osint-tools-cuba/tree/main) | @paulpogoda | ✅ Active |
+| 🇪🇪 [Estonia](https://github.com/paulpogoda/OSINT-Tools-Estonia) | @paulpogoda | ✅ Active |
+| 🇫🇷 [France](https://github.com/Aegyr21/OSINT-Tools-France/) | @Aegyr21 | ✅ Active |
+| 🇮🇳 [India](https://github.com/paulpogoda/OSINT-Tools-India) | @paulpogoda | ✅ Active |
+| 🇮🇷 [Iran](https://github.com/paulpogoda/OSINT-Tools-Iran) | @paulpogoda | ✅ Active |
+| 🇮🇶 [Iraq](https://github.com/paulpogoda/OSINT-Tools-Iraq) | @paulpogoda | ✅ Active |
+| 🇮🇱 [Israel](https://github.com/paulpogoda/OSINT-Tools-Israel) | @paulpogoda | ✅ Active |
+| 🇰🇿 [Kazakhstan](https://github.com/paulpogoda/OSINT-Tools-Kazakhstan) | @paulpogoda | ✅ Active |
+| 🇰🇬 [Kyrgyzstan](https://github.com/paulpogoda/OSINT-Tools-Kyrgyzstan) | @paulpogoda | ✅ Active |
+| 🇱🇻 [Latvia](https://github.com/paulpogoda/OSINT-Tools-Latvia) | @paulpogoda | ✅ Active |
+| 🇱🇹 [Lithuania](https://github.com/paulpogoda/OSINT-Tools-Lithuania) | @paulpogoda | ✅ Active |
+| 🇳🇱 [Netherlands](https://github.com/paulpogoda/OSINT-Tools-Netherlands/tree/master) | @paulpogoda | ✅ Active |
+| 🇰🇵 [North Korea](https://github.com/paulpogoda/OSINT-Tools-North-Korea) | @paulpogoda | ✅ Active |
+| 🇵🇱 [Poland](https://github.com/paulpogoda/OSINT-Tools-Poland) | @paulpogoda | ✅ Active |
+| 🇷🇺 [Russia](https://github.com/paulpogoda/OSINT-Tools-Russia) | @paulpogoda | ✅ Active |
+| 🇸🇦 [Saudi Arabia](https://github.com/paulpogoda/OSINT-Tools-Saudi-Arabia) | @paulpogoda | ✅ Active |
+| 🇸🇾 [Syria](https://github.com/paulpogoda/OSINT-Tools-Syria) | @paulpogoda | ✅ Active |
+| 🇹🇼 [Taiwan](https://github.com/paulpogoda/OSINT-Tools-Taiwan) | @paulpogoda | ✅ Active |
+| 🇹🇯 [Tajikistan](https://github.com/paulpogoda/OSINT-Tools-Tajikistan) | @paulpogoda | ✅ Active |
+| 🇦🇪 [United Arab Emirates](https://github.com/paulpogoda/OSINT-Tools-Emirates) | @paulpogoda | ✅ Active |
+| 🇬🇧 [United Kingdom](https://github.com/paulpogoda/OSINT-Tools-UK) | @paulpogoda | ✅ Active |
+| 🇺🇸 [United States of America](https://github.com/paulpogoda/OSINT-Tools_USA) | @paulpogoda | ✅ Active |
+| 🇺🇿 [Uzbekistan](https://github.com/paulpogoda/OSINT-Tools-Uzbekistan) | @paulpogoda | ✅ Active |
+
+---
 
 ## Resources containing multi-country links
-- [OSINT Map](https://cybdetective.com/osintmap/) - Worldwide map of OSINT tools
-- [OSINT International](https://start.me/p/7kDabv/osint-international) -  `50+ countries`
-- [Middle East OSINT](https://start.me/p/jj8Y9a/middle-east-osint) - Resources for OSINT in the Middle East
-- [World](https://start.me/p/lLaoXv/07-world) - Europe, Middle East, Africa, Americas OSINT
-- [African Continent](https://start.me/p/m6OJgv/the-bbc-africa-eye-forensics-dashboard) - Resources for OSINT on the African Continent
-- [List of OSINT Web Resources](https://github.com/OhShINT/ohshint.gitbook.io/blob/main/Lists_of_OSINT_Web_Resources/1-Complete-List-of-OSINT-Web-Resources.md#country-specific-search-engines-and-directories) -  `80+ countries`
-- [CNTY WORLD](https://start.me/p/kxNv55/cnty-world) - `80+ countries`
-- [OSINT Resources by country](https://start.me/p/kvAQBk/osint-resources-by-country) - `70+ countries`
-- [HBG UK/Europe](https://start.me/p/VRMpYm/hbg-ukeurope-research-resources) - UK/Europe research resources
-- [HBG Asia/Pacific](https://start.me/p/3KMwaw/hbg-asia-pacific-prospect-research-resources) - Asia/Pacific research resources
-- [HBG North America](https://start.me/p/ZQdorV/hbg-north-america-prospect-research-links) - North America research resources
-- [HBG Middle East](https://start.me/p/ZYaxaJ/hbg-middle-east-prospect-research-links) - Middle East research resources
+
+| Resource | Coverage | Notes |
+|---|---|---|
+| [OSINT Map](https://cybdetective.com/osintmap/) | Worldwide | Interactive map of OSINT tools |
+| [OSINT International](https://start.me/p/7kDabv/osint-international) | 50+ countries | start.me collection |
+| [Middle East OSINT](https://start.me/p/jj8Y9a/middle-east-osint) | Middle East | Regional focus |
+| [World](https://start.me/p/lLaoXv/07-world) | Europe, ME, Africa, Americas | start.me collection |
+| [African Continent](https://start.me/p/m6OJgv/the-bbc-africa-eye-forensics-dashboard) | Africa | BBC Africa Eye resources |
+| [List of OSINT Web Resources](https://github.com/OhShINT/ohshint.gitbook.io/blob/main/Lists_of_OSINT_Web_Resources/1-Complete-List-of-OSINT-Web-Resources.md#country-specific-search-engines-and-directories) | 80+ countries | GitHub collection |
+| [CNTY WORLD](https://start.me/p/kxNv55/cnty-world) | 80+ countries | start.me collection |
+| [OSINT Resources by country](https://start.me/p/kvAQBk/osint-resources-by-country) | 70+ countries | start.me collection |
+| [HBG UK/Europe](https://start.me/p/VRMpYm/hbg-ukeurope-research-resources) | UK/Europe | Prospect research focus |
+| [HBG Asia/Pacific](https://start.me/p/3KMwaw/hbg-asia-pacific-prospect-research-resources) | Asia/Pacific | Prospect research focus |
+| [HBG North America](https://start.me/p/ZQdorV/hbg-north-america-prospect-research-links) | North America | Prospect research focus |
+| [HBG Middle East](https://start.me/p/ZYaxaJ/hbg-middle-east-prospect-research-links) | Middle East | Prospect research focus |
 
 ---
 
 ## Contributing
 
-To contribute to this repository:
-1. Verify all links are working and accessible
-2. Provide accurate descriptions of database contents
-3. Follow the 7-category structure
-4. Include official government sources when available
-5. Submit pull requests with detailed change descriptions
+**Want to help grow this collection?** Here's how:
+
+### Add a new country
+1. Copy the [Country Template](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/blob/main/Country%20Template)
+2. Create a new public repository following the 7-category structure
+3. See examples: [Kazakhstan](https://github.com/paulpogoda/OSINT-Tools-Kazakhstan), [UAE](https://github.com/paulpogoda/OSINT-Tools-Emirates)
+4. Submit a pull request to this index repository to add your link to the table above
+
+### Update an existing country
+- Submit a pull request directly to the corresponding country repo
+
+### Quality guidelines
+- ✅ Verify all links are working and accessible before submitting
+- ✅ Provide accurate descriptions of database contents
+- ✅ Follow the 7-category structure
+- ✅ Include official government sources when available
+- ✅ Submit pull requests with detailed change descriptions
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for full contribution guidelines.
+
+---
 
 ## Legal Disclaimer
 
-This repository is for educational and legitimate investigative purposes only. Users are responsible for:
-- Complying with all applicable laws and regulations
-- Respecting terms of service for all databases and tools
+> This repository is for **educational and legitimate investigative purposes only**.
+
+Users are responsible for:
+- Complying with all applicable laws and regulations in their jurisdiction
+- Respecting the terms of service for all databases and tools listed
 - Using information ethically and responsibly
 - Obtaining proper authorization when required
 
-The information provided is for informational purposes only and should not be considered legal advice.
+*The information provided is for informational purposes only and should not be considered legal advice.*
 
 ---
 
-**Repository maintained by the OSINT-for-Countries-V2.0 community**
+<div align="center">
+
+**Repository maintained by the [OSINT-for-Countries-V2.0](https://github.com/Provereno-Media/OSINT-for-countries-V2.0) community**
+
+Support the project: [Patreon](https://patreon.com/provereno) · [Stripe](https://buy.stripe.com/cN229pfEm1xj0I8fYY)
+
+</div>
