@@ -136,8 +136,6 @@ On each country repository you will find tools and resources grouped by **one un
 - ✅ Include official government sources when available
 - ✅ Submit pull requests with detailed change descriptions
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for full contribution guidelines.
-
 ---
 
 ## Legal Disclaimer
