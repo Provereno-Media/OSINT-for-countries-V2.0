@@ -83,6 +83,7 @@ On each country repository you will find tools and resources grouped by **one un
 | 🇱🇻 [Latvia](https://github.com/paulpogoda/OSINT-Tools-Latvia) | @paulpogoda | ✅ Active |
 | 🇱🇹 [Lithuania](https://github.com/paulpogoda/OSINT-Tools-Lithuania) | @paulpogoda | ✅ Active |
 | 🇳🇱 [Netherlands](https://github.com/paulpogoda/OSINT-Tools-Netherlands/tree/master) | @paulpogoda | ✅ Active |
+| 🇳🇬 [Nigeria](https://github.com/zerometa-hq/OSINT-Tools-Nigeria) | @zerometa-hq | ✅ Active |
 | 🇰🇵 [North Korea](https://github.com/paulpogoda/OSINT-Tools-North-Korea) | @paulpogoda | ✅ Active |
 | 🇵🇱 [Poland](https://github.com/paulpogoda/OSINT-Tools-Poland) | @paulpogoda | ✅ Active |
 | 🇷🇺 [Russia](https://github.com/paulpogoda/OSINT-Tools-Russia) | @paulpogoda | ✅ Active |
