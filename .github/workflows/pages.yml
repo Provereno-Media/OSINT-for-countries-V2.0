@@ -1,0 +1,43 @@
+name: Build and deploy country resource search
+on:
+  push:
+    branches: [main]
+    paths:
+      - README.md
+      - scripts/build_index.py
+      - tests/test_build_index.py
+      - site/**
+      - .github/workflows/pages.yml
+  schedule:
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test README parser
+        run: python -m unittest discover -s tests -v
+      - name: Build resource index
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python scripts/build_index.py site/resources.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
