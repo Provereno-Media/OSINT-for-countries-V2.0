@@ -14,7 +14,7 @@ INDEX_OWNER = 'Provereno-Media'
 INDEX_REPO = 'OSINT-for-countries-V2.0'
 COUNTRY = re.compile(r'^\|[^|]*?\[([^\]]+)\]\(https://github\.com/([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+)(?:/tree/[^/\s)]+)?/?\)', re.I)
 HEADING = re.compile(r'^#{2,4}\s+(.+?)\s*#*\s*$')
-LINK = re.compile(r'\[([^\]]+)\]\((https?://[^\s)]+)', re.I)
+LINK = re.compile(r'\[([^\]]+)\]\((https?://[^\s)]+)\)', re.I)
 BULLET = re.compile(r'^\s*[-*]\s+')
 CATEGORIES = {
     'open data portals': 'Open Data portals',

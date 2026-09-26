@@ -62,6 +62,21 @@ The public procurement portal is a state information system.
         self.assertEqual(rows[0]['url'], 'https://goszakup.gov.kz/')
         self.assertIn('state information system', rows[0]['description'])
 
+    def test_descriptions_start_after_closing_link_parenthesis(self):
+        markdown = '''## Open Data portals
+- [Portal](https://example.org/portal) — Official open data
+- [Unannotated](https://example.org/empty)
+| [Statistics](https://example.org/stats) | National statistics |
+## Public procurements
+### [Tenders](https://example.org/tenders)
+Government tenders and awards.
+'''
+        rows = resources_from_readme(markdown, 'Example', 'https://github.com/example/repo')
+        self.assertEqual(
+            [row['description'] for row in rows],
+            ['Official open data', '', 'National statistics', 'Government tenders and awards'],
+        )
+
     def test_unrecognized_resource_link_is_reported(self):
         markdown = '''## Maps
 Official resource: [Map](https://example.org/map)
