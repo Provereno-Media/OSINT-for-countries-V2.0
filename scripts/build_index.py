@@ -71,6 +71,8 @@ def resources_from_readme(markdown, country, repo_url, candidates=None):
         name, url = match.groups()
         name = clean(name)
         url = url.rstrip('.,;')
+        # Tolerate an extra closing parenthesis after a Markdown link.
+        description = re.sub(r'^\s*\)+', '', description)
         if not name or urlparse(url).scheme not in ('http', 'https') or (category, url) in seen:
             return
         seen.add((category, url))

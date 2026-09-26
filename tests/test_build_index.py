@@ -67,6 +67,7 @@ The public procurement portal is a state information system.
 - [Portal](https://example.org/portal) — Official open data
 - [Unannotated](https://example.org/empty)
 | [Statistics](https://example.org/stats) | National statistics |
+- [Cadastral Map](https://example.org/map)). Paid (Bulgarian & English)
 ## Public procurements
 ### [Tenders](https://example.org/tenders)
 Government tenders and awards.
@@ -74,7 +75,7 @@ Government tenders and awards.
         rows = resources_from_readme(markdown, 'Example', 'https://github.com/example/repo')
         self.assertEqual(
             [row['description'] for row in rows],
-            ['Official open data', '', 'National statistics', 'Government tenders and awards'],
+            ['Official open data', '', 'National statistics', 'Paid (Bulgarian & English)', 'Government tenders and awards'],
         )
 
     def test_unrecognized_resource_link_is_reported(self):
