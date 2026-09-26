@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Search country-specific OSINT resources collected from the OSINT-for-countries repositories.">
+  <title>OSINT resources by country — Search</title>
+  <style>
+    :root { color-scheme: light dark; font: 16px/1.5 system-ui, sans-serif; }
+    body { max-width: 74rem; margin: auto; padding: 1.25rem; }
+    header { border-bottom: 1px solid #8886; margin-bottom: 1.5rem; }
+    .controls { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: .75rem; }
+    input, select, button { font: inherit; padding: .65rem; min-width: 0; }
+    input { width: 100%; box-sizing: border-box; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 1rem 0; border-bottom: 1px solid #8886; overflow-wrap: anywhere; }
+    .meta, .note { opacity: .8; font-size: .9rem; }
+    .meta { margin: .2rem 0; }
+    a { color: #1260b2; }
+    @media (prefers-color-scheme: dark) { a { color: #8bc3ff; } }
+    @media (max-width: 700px) { .controls { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OSINT resources by country</h1>
+    <p>Search resources from the <a href="https://github.com/pogoda-provereno/OSINT-for-countries-V2.0">OSINT-for-countries-V2.0</a> community repositories.</p>
+  </header>
+  <main>
+    <div class="controls">
+      <label>Search<input id="query" type="search" placeholder="Name, description, country…" autocomplete="off"></label>
+      <label>Country<select id="country"><option value="">All countries</option></select></label>
+      <label>Category<select id="category"><option value="">All categories</option></select></label>
+    </div>
+    <p id="status" role="status" aria-live="polite">Loading index…</p>
+    <ul id="results"></ul>
+    <button id="more" type="button" hidden>Show more</button>
+    <p class="note">Entries are imported from country READMEs. Inclusion in this search is not a live check of a resource link, its access conditions, or its accuracy. Report corrections in the source repository.</p>
+  </main>
+  <script type="module">
+    const $ = id => document.getElementById(id);
+    const query = $('query'), country = $('country'), category = $('category');
+    const results = $('results'), status = $('status'), more = $('more');
+    const normalize = value => String(value ?? '').normalize('NFKC').toLocaleLowerCase().trim();
+    const categories = ['Open Data portals', 'Legal Entities', 'Cadastral and other Maps', 'Vehicles', 'People, phones, social etc.', 'Public procurements', 'WHOIS'];
+    let records = [], matches = [], visible = 0;
+
+    function option(select, value) {
+      const el = document.createElement('option');
+      el.value = value;
+      el.textContent = value;
+      select.append(el);
+    }
+    function appendResults() {
+      const next = matches.slice(visible, visible + 50);
+      for (const item of next) {
+        const li = document.createElement('li');
+        const title = document.createElement('a');
+        title.href = item.url;
+        title.textContent = item.name;
+        title.target = '_blank';
+        title.rel = 'noopener noreferrer';
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        meta.textContent = [item.country, item.category, item.subsection].filter(Boolean).join(' · ');
+        li.append(title, meta);
+        if (item.description) {
+          const desc = document.createElement('div');
+          desc.textContent = item.description;
+          li.append(desc);
+        }
+        const source = document.createElement('a');
+        source.href = item.source;
+        source.textContent = 'Source README';
+        li.append(source);
+        results.append(li);
+      }
+      visible += next.length;
+      more.hidden = visible >= matches.length;
+      status.textContent = `Showing ${visible} of ${matches.length} matching resources`;
+    }
+    function search() {
+      const term = normalize(query.value);
+      matches = records.filter(item =>
+        (!country.value || item.country === country.value) &&
+        (!category.value || item.category === category.value) &&
+        (!term || normalize([item.name, item.description, item.country, item.category, item.subsection].join(' ')).includes(term))
+      );
+      visible = 0;
+      results.replaceChildren();
+      appendResults();
+    }
+    try {
+      const response = await fetch('./resources.json');
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      records = data.resources;
+      for (const name of [...new Set(data.countries.filter(c => c.ok).map(c => c.country))].sort()) option(country, name);
+      for (const name of categories) option(category, name);
+      for (const control of [query, country, category]) control.addEventListener('input', search);
+      more.addEventListener('click', appendResults);
+      const failed = data.countries.filter(c => !c.ok);
+      if (failed.length) {
+        const warning = document.createElement('p');
+        warning.className = 'note';
+        warning.textContent = `Index incomplete: ${failed.length} country README(s) could not be imported: ${failed.map(c => c.country).join(', ')}.`;
+        $('status').before(warning);
+      }
+      search();
+    } catch (error) {
+      status.textContent = 'Search index unavailable. Please retry later or browse the GitHub repository.';
+      console.error(error);
+    }
+  </script>
+</body>
+</html>
