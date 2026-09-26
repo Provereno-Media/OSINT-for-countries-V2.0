@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a browser-searchable index from the country repositories in README.md."""
+"""Build the static resource index and an import coverage report."""
 import json
 import os
 import re
@@ -10,6 +10,8 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+INDEX_OWNER = 'Provereno-Media'
+INDEX_REPO = 'OSINT-for-countries-V2.0'
 COUNTRY = re.compile(r'^\|[^|]*?\[([^\]]+)\]\(https://github\.com/([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+)/?\)', re.I)
 HEADING = re.compile(r'^#{2,4}\s+(.+?)\s*#*\s*$')
 LINK = re.compile(r'\[([^\]]+)\]\((https?://[^\s)]+)', re.I)
@@ -26,6 +28,8 @@ CATEGORIES = {
     'public procurements': 'Public procurements',
     'whois': 'WHOIS',
 }
+ORDER = tuple(dict.fromkeys(CATEGORIES.values()))
+NON_RESOURCE_SECTIONS = {'table of contents', 'contributions', 'contributing', 'legal disclaimer', 'appendix', 'about', 'license'}
 
 
 def clean(text):
@@ -49,9 +53,10 @@ def countries_from_index(markdown):
     return countries
 
 
-def resources_from_readme(markdown, country, repo_url):
+def resources_from_readme(markdown, country, repo_url, candidates=None):
     resources = []
     category = None
+    section = ''
     subsection = ''
     seen = set()
     in_code = False
@@ -74,6 +79,18 @@ def resources_from_readme(markdown, country, repo_url):
             'source': repo_url + '/blob/HEAD/README.md',
         })
 
+    def flag(line_number, reason, match, line):
+        if candidates is not None and match:
+            candidates.append({
+                'country': country,
+                'section': section,
+                'line': line_number,
+                'reason': reason,
+                'url': match.group(2),
+                'excerpt': line.strip()[:240],
+                'source': repo_url + '/blob/HEAD/README.md',
+            })
+
     for position, line in enumerate(lines):
         if re.match(r'^\s*(```|~~~)', line):
             in_code = not in_code
@@ -86,6 +103,7 @@ def resources_from_readme(markdown, country, repo_url):
             heading_text = heading.group(1).strip()
             label = clean(heading_text).lower().rstrip(':')
             if level == 2:
+                section = clean(heading_text)
                 category = CATEGORIES.get(label)
                 subsection = ''
             elif category == 'Vehicles' and level == 3 and not LINK.search(heading_text):
@@ -102,12 +120,20 @@ def resources_from_readme(markdown, country, repo_url):
                         description = following
                         break
                     add_resource(match, description)
-            continue
-        if not category or not (BULLET.match(line) or line.startswith('|')):
+            elif category and LINK.search(heading_text):
+                flag(position + 1, 'unsupported_heading', LINK.search(heading_text), line)
+            elif category is None and section and label not in NON_RESOURCE_SECTIONS and level != 2:
+                flag(position + 1, 'unrecognized_section', LINK.search(line), line)
             continue
         match = LINK.search(line)
-        if match:
+        if not match:
+            continue
+        if category and (BULLET.match(line) or line.startswith('|')):
             add_resource(match, line[match.end():])
+        elif category:
+            flag(position + 1, 'unsupported_format', match, line)
+        elif section.lower() not in NON_RESOURCE_SECTIONS and section:
+            flag(position + 1, 'unrecognized_section', match, line)
     return resources
 
 
@@ -125,34 +151,52 @@ def fetch_readme(owner, repo):
 
 
 def build(output):
-    index = (ROOT / 'README.md').read_text(encoding='utf-8')
+    index = fetch_readme(INDEX_OWNER, INDEX_REPO)
     countries = countries_from_index(index)
     if not countries:
-        raise RuntimeError('No country repositories found in the index README')
+        raise RuntimeError('No countries found in the canonical index README')
+    generated_at = datetime.now(timezone.utc).isoformat()
+    index_url = f'https://github.com/{INDEX_OWNER}/{INDEX_REPO}/blob/HEAD/README.md'
     records = []
     status = []
+    candidates = []
     for item in countries:
         repo_url = f"https://github.com/{item['owner']}/{item['repo']}"
+        country_candidates = []
         try:
             markdown = fetch_readme(item['owner'], item['repo'])
-            found = resources_from_readme(markdown, item['name'], repo_url)
+            found = resources_from_readme(markdown, item['name'], repo_url, country_candidates)
             if not found:
                 raise ValueError('No resources recognized in README')
             records.extend(found)
-            status.append({'country': item['name'], 'repository': repo_url, 'count': len(found), 'ok': True})
+            counts = {category: sum(r['category'] == category for r in found) for category in ORDER}
+            status.append({'country': item['name'], 'repository': repo_url, 'count': len(found), 'categories': counts, 'candidates': len(country_candidates), 'ok': True})
+            candidates.extend(country_candidates)
         except (OSError, UnicodeError, ValueError) as exc:
             print(f"WARNING: {repo_url}: {exc}", file=sys.stderr)
-            status.append({'country': item['name'], 'repository': repo_url, 'count': 0, 'ok': False})
+            status.append({'country': item['name'], 'repository': repo_url, 'count': 0, 'categories': dict.fromkeys(ORDER, 0), 'candidates': 0, 'ok': False, 'error': str(exc)})
     if not records:
         raise RuntimeError('No resources collected; refusing to publish an empty index')
     data = {
-        'generated_at': datetime.now(timezone.utc).isoformat(),
+        'generated_at': generated_at,
+        'index_source': index_url,
         'countries': status,
         'resources': sorted(records, key=lambda r: (r['country'].casefold(), r['category'], r['name'].casefold())),
     }
+    report = {
+        'generated_at': generated_at,
+        'index_source': index_url,
+        'country_total': len(countries),
+        'country_imported': sum(c['ok'] for c in status),
+        'resource_total': len(records),
+        'countries': status,
+        'possible_omissions': candidates,
+        'note': 'Possible omissions require manual review; zero resources in a category does not by itself prove a parsing error.',
+    }
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(data, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    print(f"Indexed {len(records)} resources from {sum(c['ok'] for c in status)}/{len(status)} countries -> {output}")
+    output.with_name('import-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f"Indexed {len(records)} resources from {report['country_imported']}/{len(countries)} countries; {len(candidates)} candidate omissions -> {output}")
 
 
 if __name__ == '__main__':
