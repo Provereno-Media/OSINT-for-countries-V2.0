@@ -15,6 +15,15 @@ class ParserTests(unittest.TestCase):
         markdown = '| 🇰🇿 [Kazakhstan](https://github.com/paulpogoda/OSINT-Tools-Kazakhstan) | [Fork](https://github.com/other/fork) | ✅ Active |\n'
         self.assertEqual(countries_from_index(markdown), [{'name': 'Kazakhstan', 'owner': 'paulpogoda', 'repo': 'OSINT-Tools-Kazakhstan'}])
 
+    def test_cuba_and_bulgaria_tree_links(self):
+        markdown = '''| 🇧🇬 [Bulgaria](https://github.com/paulpogoda/OSINT-Tools-Bulgaria/tree/main) | @paulpogoda | Active |
+| 🇨🇺 [Cuba](https://github.com/paulpogoda/osint-tools-cuba/tree/main) | @paulpogoda | Active |
+'''
+        self.assertEqual(
+            [(item['name'], item['repo']) for item in countries_from_index(markdown)],
+            [('Bulgaria', 'OSINT-Tools-Bulgaria'), ('Cuba', 'osint-tools-cuba')],
+        )
+
     def test_categories_and_vehicle_subsection(self):
         markdown = '''## Table of contents
 - [Registry](https://example.org/navigation)
@@ -30,6 +39,15 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(len(rows), 2)
         self.assertEqual(rows[0]['category'], 'Legal Entities')
         self.assertEqual(rows[1]['subsection'], 'Land Vehicles')
+
+    def test_cuba_category_punctuation_and_icon(self):
+        markdown = '''## People, Phones, Social etc.
+- [Directory](https://example.org/people) - People search
+## 🌐 WHOIS
+- [NIC.cu](https://example.org/whois) - Domain information
+'''
+        rows = resources_from_readme(markdown, 'Cuba', 'https://github.com/paulpogoda/osint-tools-cuba')
+        self.assertEqual([row['category'] for row in rows], ['People, phones, social etc.', 'WHOIS'])
 
     def test_kazakhstan_procurement_linked_heading(self):
         markdown = '''## Public procurement

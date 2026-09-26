@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 ROOT = Path(__file__).resolve().parents[1]
 INDEX_OWNER = 'Provereno-Media'
 INDEX_REPO = 'OSINT-for-countries-V2.0'
-COUNTRY = re.compile(r'^\|[^|]*?\[([^\]]+)\]\(https://github\.com/([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+)/?\)', re.I)
+COUNTRY = re.compile(r'^\|[^|]*?\[([^\]]+)\]\(https://github\.com/([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+)(?:/tree/[^/\s)]+)?/?\)', re.I)
 HEADING = re.compile(r'^#{2,4}\s+(.+?)\s*#*\s*$')
 LINK = re.compile(r'\[([^\]]+)\]\((https?://[^\s)]+)', re.I)
 BULLET = re.compile(r'^\s*[-*]\s+')
@@ -36,6 +36,11 @@ def clean(text):
     text = re.sub(r'<[^>]+>', '', text)
     text = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', text)
     return re.sub(r'\s+', ' ', text.replace('**', '').replace('__', '').strip(' |\t—–-:.;'))
+
+
+def category_key(text):
+    text = clean(text).casefold()
+    return re.sub(r'\s+', ' ', re.sub(r'[^\w\s]+', ' ', text)).strip()
 
 
 def countries_from_index(markdown):
@@ -101,7 +106,7 @@ def resources_from_readme(markdown, country, repo_url, candidates=None):
         if heading:
             level = len(line) - len(line.lstrip('#'))
             heading_text = heading.group(1).strip()
-            label = clean(heading_text).lower().rstrip(':')
+            label = category_key(heading_text)
             if level == 2:
                 section = clean(heading_text)
                 category = CATEGORIES.get(label)
