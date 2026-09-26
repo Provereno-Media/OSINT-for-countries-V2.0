@@ -28,6 +28,22 @@ class ParserTests(unittest.TestCase):
         self.assertEqual(rows[1]['subsection'], 'Land Vehicles')
         self.assertEqual(rows[1]['name'], 'VIN Decoder')
 
+    def test_kazakhstan_procurement_linked_heading(self):
+        markdown = '''## Public procurement
+### [Public procurement portal](https://goszakup.gov.kz/)
+The public procurement portal is a state information system.
+- registration of participants;
+## WHOIS
+- [Domain lookup](https://example.org/whois) - Lookup
+'''
+        rows = resources_from_readme(markdown, 'Kazakhstan', 'https://github.com/example/repo')
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(rows[0]['name'], 'Public procurement portal')
+        self.assertEqual(rows[0]['category'], 'Public procurements')
+        self.assertEqual(rows[0]['url'], 'https://goszakup.gov.kz/')
+        self.assertIn('state information system', rows[0]['description'])
+        self.assertEqual(rows[1]['category'], 'WHOIS')
+
 
 if __name__ == '__main__':
     unittest.main()

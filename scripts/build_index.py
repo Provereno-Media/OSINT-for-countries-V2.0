@@ -55,7 +55,26 @@ def resources_from_readme(markdown, country, repo_url):
     subsection = ''
     seen = set()
     in_code = False
-    for line in markdown.splitlines():
+    lines = markdown.splitlines()
+
+    def add_resource(match, description):
+        name, url = match.groups()
+        name = clean(name)
+        url = url.rstrip('.,;')
+        if not name or urlparse(url).scheme not in ('http', 'https') or (category, url) in seen:
+            return
+        seen.add((category, url))
+        resources.append({
+            'country': country,
+            'category': category,
+            'subsection': subsection,
+            'name': name,
+            'description': clean(description)[:500],
+            'url': url,
+            'source': repo_url + '/blob/HEAD/README.md',
+        })
+
+    for position, line in enumerate(lines):
         if re.match(r'^\s*(```|~~~)', line):
             in_code = not in_code
             continue
@@ -64,36 +83,31 @@ def resources_from_readme(markdown, country, repo_url):
         heading = HEADING.match(line)
         if heading:
             level = len(line) - len(line.lstrip('#'))
-            label = clean(heading.group(1)).lower().rstrip(':')
+            heading_text = heading.group(1).strip()
+            label = clean(heading_text).lower().rstrip(':')
             if level == 2:
                 category = CATEGORIES.get(label)
                 subsection = ''
-            elif category == 'Vehicles' and level == 3:
-                subsection = clean(heading.group(1))
+            elif category == 'Vehicles' and level == 3 and not LINK.search(heading_text):
+                subsection = clean(heading_text)
+            if category and level in (3, 4) and re.match(r'^(?:\*\*)?\[', heading_text):
+                match = LINK.search(heading_text)
+                if match:
+                    description = ''
+                    for following in lines[position + 1:]:
+                        if not following.strip():
+                            continue
+                        if HEADING.match(following) or BULLET.match(following) or following.startswith('|'):
+                            break
+                        description = following
+                        break
+                    add_resource(match, description)
             continue
         if not category or not (BULLET.match(line) or line.startswith('|')):
             continue
         match = LINK.search(line)
-        if not match:
-            continue
-        name, url = match.groups()
-        url = url.rstrip('.,;')
-        if urlparse(url).scheme not in ('http', 'https'):
-            continue
-        name = clean(name)
-        if not name or (category, url) in seen:
-            continue
-        seen.add((category, url))
-        description = clean(line[match.end():])[:500]
-        resources.append({
-            'country': country,
-            'category': category,
-            'subsection': subsection,
-            'name': name,
-            'description': description,
-            'url': url,
-            'source': repo_url + '/blob/HEAD/README.md',
-        })
+        if match:
+            add_resource(match, line[match.end():])
     return resources
 
 
