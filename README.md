@@ -8,11 +8,11 @@
 [![Contributors](https://img.shields.io/github/contributors/Provereno-Media/OSINT-for-countries-V2.0?style=flat-square&color=green)](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/graphs/contributors)
 [![Last Commit](https://img.shields.io/github/last-commit/Provereno-Media/OSINT-for-countries-V2.0?style=flat-square)](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/commits/main)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL--3.0-blue?style=flat-square)](LICENSE)
-[![Countries](https://img.shields.io/badge/Countries-32-orange?style=flat-square)](#table-of-contents)
+[![Countries](https://img.shields.io/badge/Countries-35-orange?style=flat-square)](#table-of-contents)
 [![Categories](https://img.shields.io/badge/Categories%20per%20country-7-purple?style=flat-square)](#what-does-standardized-collection-mean)
 [![Community Driven](https://img.shields.io/badge/Community-Driven-brightgreen?style=flat-square)](CONTRIBUTING.md)
 
-**📊 32 countries · 7 categories per country · Community-driven**
+**📊 35 countries · 7 categories per country · Community-driven**
 
 [About](#about) · [Standard](#what-does-standardized-collection-mean) · [Countries](#table-of-contents) · [Multi-country Resources](#resources-containing-multi-country-links) · [Contributing](#contributing) · [Legal](#legal-disclaimer)
 
@@ -61,7 +61,7 @@ On each country repository you will find tools and resources grouped by **one un
 
 ## Table of Contents
 
-> 🌍 **32 countries** currently indexed. [Want to add yours?](#contributing)
+> 🌍 **35 countries** currently indexed. [Want to add yours?](#contributing)
 
 | Country | Maintainer | Status |
 |---|---|---|
@@ -76,6 +76,7 @@ On each country repository you will find tools and resources grouped by **one un
 | 🇨🇺 [Cuba](https://github.com/paulpogoda/osint-tools-cuba/tree/main) | @paulpogoda | ✅ Active |
 | 🇪🇪 [Estonia](https://github.com/paulpogoda/OSINT-Tools-Estonia) | @paulpogoda | ✅ Active |
 | 🇫🇷 [France](https://github.com/Aegyr21/OSINT-Tools-France/) | @Aegyr21 | ✅ Active |
+| 🇬🇪 [Georgia](https://github.com/SosoPkhakadze/OSINT-Tools-Georgia) | @SosoPkhakadze | ✅ Active |
 | 🇮🇳 [India](https://github.com/paulpogoda/OSINT-Tools-India) | @paulpogoda | ✅ Active |
 | 🇮🇷 [Iran](https://github.com/paulpogoda/OSINT-Tools-Iran) | @paulpogoda | ✅ Active |
 | 🇮🇶 [Iraq](https://github.com/paulpogoda/OSINT-Tools-Iraq) | @paulpogoda | ✅ Active |
@@ -84,6 +85,7 @@ On each country repository you will find tools and resources grouped by **one un
 | 🇰🇬 [Kyrgyzstan](https://github.com/paulpogoda/OSINT-Tools-Kyrgyzstan) | @paulpogoda | ✅ Active |
 | 🇱🇻 [Latvia](https://github.com/paulpogoda/OSINT-Tools-Latvia) | @paulpogoda | ✅ Active |
 | 🇱🇹 [Lithuania](https://github.com/paulpogoda/OSINT-Tools-Lithuania) | @paulpogoda | ✅ Active |
+| 🇲🇩 [Moldova](https://github.com/SosoPkhakadze/OSINT-Tools-Moldova) | @SosoPkhakadze | ✅ Active |
 | 🇳🇱 [Netherlands](https://github.com/paulpogoda/OSINT-Tools-Netherlands/tree/master) | @paulpogoda | ✅ Active |
 | 🇳🇬 [Nigeria](https://github.com/zerometa-hq/OSINT-Tools-Nigeria) | @zerometa-hq | ✅ Active |
 | 🇰🇵 [North Korea](https://github.com/paulpogoda/OSINT-Tools-North-Korea) | @paulpogoda | ✅ Active |
