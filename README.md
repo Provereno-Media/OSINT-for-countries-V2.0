@@ -68,7 +68,7 @@ On each country repository you will find tools and resources grouped by **one un
 | 🇦🇲 [Armenia](https://github.com/paulpogoda/OSINT-Tools-Armenia/) | @paulpogoda | ✅ Active |
 | 🇦🇺 [Australia](https://github.com/paulpogoda/OSINT-Tools-Australia/) | @paulpogoda | ✅ Active |
 | 🇦🇿 [Azerbaijan](https://github.com/paulpogoda/OSINT-Tools-Azerbaijan/) | @paulpogoda | ✅ Active |
-| 🇧🇩 [Bangladesh](https://github.com/seotausif/OSINT-Tools-Bangladesh) | Tausif Akbar · [Fork by Pogoda](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) | ✅ Active |
+| 🇧🇩 [Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) | Tausif Akbar · Pogoda | ✅ Active |
 | 🇧🇾 [Belarus](https://github.com/paulpogoda/OSINT-Tools-Belarus) | @paulpogoda | ✅ Active |
 | 🇧🇷 [Brazil](https://github.com/bgmello/OSINT-Tools-Brazil/) | Bruno Görresen Mello | ✅ Active |
 | 🇧🇬 [Bulgaria](https://github.com/paulpogoda/OSINT-Tools-Bulgaria/tree/main) | @paulpogoda | ✅ Active |
