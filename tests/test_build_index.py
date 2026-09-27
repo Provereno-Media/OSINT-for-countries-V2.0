@@ -49,6 +49,21 @@ class ParserTests(unittest.TestCase):
         rows = resources_from_readme(markdown, 'Cuba', 'https://github.com/paulpogoda/osint-tools-cuba')
         self.assertEqual([row['category'] for row in rows], ['People, phones, social etc.', 'WHOIS'])
 
+    def test_switzerland_people_heading_without_etc(self):
+        markdown = '''## People, Phones, Social
+### Professional Registries
+- **[MedReg — Register of Medical Professions](https://healthreg-public.admin.ch)**: Official medical professions register
+### Phone & Contact Directories
+- **[Tel.Search](https://tel.search.ch/index.en.html)**: Swiss phone numbers and addresses
+## Public Procurements
+- **[SIMAP](https://www.simap.ch)**: Official Swiss public procurement
+'''
+        candidates = []
+        rows = resources_from_readme(markdown, 'Switzerland', 'https://github.com/Provereno-Media/OSINT-Tools-Switzerland', candidates)
+        self.assertEqual([row['name'] for row in rows], ['MedReg — Register of Medical Professions', 'Tel.Search', 'SIMAP'])
+        self.assertEqual([row['category'] for row in rows], ['People, phones, social etc.', 'People, phones, social etc.', 'Public procurements'])
+        self.assertEqual(candidates, [])
+
     def test_kazakhstan_procurement_linked_heading(self):
         markdown = '''## Public procurement
 ### [Public procurement portal](https://goszakup.gov.kz/)

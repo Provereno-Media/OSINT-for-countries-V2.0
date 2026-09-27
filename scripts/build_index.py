@@ -23,6 +23,7 @@ CATEGORIES = {
     'cadastral and other maps': 'Cadastral and other Maps',
     'vehicles': 'Vehicles',
     'people': 'People, phones, social etc.',
+    'people phones social': 'People, phones, social etc.',
     'people phones social etc': 'People, phones, social etc.',
     'public procurement': 'Public procurements',
     'public procurements': 'Public procurements',
