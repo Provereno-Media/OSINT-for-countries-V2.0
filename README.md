@@ -2,6 +2,8 @@
 
 ![image](https://github.com/user-attachments/assets/af412678-6d84-40c0-aa99-5041c928e47e)
 
+**Interactive Version is [here](https://provereno-media.github.io/OSINT-for-countries-V2.0/), it grows automatically after the standardized country repo is published and listed in this README.**
+
 
 [![Stars](https://img.shields.io/github/stars/Provereno-Media/OSINT-for-countries-V2.0?style=flat-square&color=yellow)](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/stargazers)
 [![Forks](https://img.shields.io/github/forks/Provereno-Media/OSINT-for-countries-V2.0?style=flat-square&color=blue)](https://github.com/Provereno-Media/OSINT-for-countries-V2.0/network/members)
@@ -88,7 +90,7 @@ On each country repository you will find tools and resources grouped by **one un
 | 🇱🇹 [Lithuania](https://github.com/paulpogoda/OSINT-Tools-Lithuania) | @paulpogoda | ✅ Active |
 | 🇲🇩 [Moldova](https://github.com/SosoPkhakadze/OSINT-Tools-Moldova) | @SosoPkhakadze | ✅ Active |
 | 🇳🇱 [Netherlands](https://github.com/paulpogoda/OSINT-Tools-Netherlands/tree/master) | @paulpogoda | ✅ Active |
-| 🇳🇬 [Nigeria](https://github.com/zerometa-hq/OSINT-Tools-Nigeria) | @zerometa-hq | ✅ Active |
+| 🇳🇬 [Nigeria](https://github.com/Provereno-Media/OSINT-Tools-Nigeria-V2) | @zerometa-hq · Pogoda | ✅ Active |
 | 🇰🇵 [North Korea](https://github.com/paulpogoda/OSINT-Tools-North-Korea) | @paulpogoda | ✅ Active |
 | 🇵🇱 [Poland](https://github.com/paulpogoda/OSINT-Tools-Poland) | @paulpogoda | ✅ Active |
 | 🇷🇺 [Russia](https://github.com/paulpogoda/OSINT-Tools-Russia) | @paulpogoda | ✅ Active |
