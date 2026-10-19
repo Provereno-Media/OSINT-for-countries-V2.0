@@ -100,7 +100,7 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 |---|---|---|---|
 | 🇦🇹 [Austria](https://github.com/Provereno-Media/OSINT-Tools-Austria) | @provereno-media | 📌 Listed | Not recorded |
 | 🇧🇪 [Belgium](https://github.com/Provereno-Media/OSINT-Tools-Belgium) | @provereno-media | 📌 Listed | Not recorded |
-| 🇧🇬 [Bulgaria](https://github.com/Provereno-Media/OSINT-Tools-Bulgaria) | @LinaYorda | 📌 Listed | Not recorded |
+| 🇧🇬 [Bulgaria](https://github.com/Provereno-Media/OSINT-Tools-Bulgaria) | @LinaYorda @paulpogoda | 📌 Listed | Not recorded |
 | 🇭🇷 [Croatia](https://github.com/Provereno-Media/OSINT-Tools-Croatia) | @provereno-media | 📌 Listed | Not recorded |
 | 🇩🇰 [Denmark](https://github.com/Provereno-Media/OSINT-Tools-Denmark) | @provereno-media | 📌 Listed | Not recorded |
 | 🇪🇪 [Estonia](https://github.com/Provereno-Media/OSINT-Tools-Estonia) | @provereno-media | 📌 Listed | Not recorded |
@@ -113,10 +113,10 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 | 🇮🇪 [Ireland](https://github.com/Provereno-Media/OSINT-Tools-Ireland) | @provereno-media | 📌 Listed | Not recorded |
 | 🇮🇹 [Italy](https://github.com/Provereno-Media/OSINT-Tools-Italy) | @provereno-media | 📌 Listed | Not recorded |
 | 🇱🇻 [Latvia](https://github.com/Provereno-Media/OSINT-Tools-Latvia/) | @provereno-media | 📌 Listed | Not recorded |
-| 🇱🇹 [Lithuania](https://github.com/paulpogoda/OSINT-Tools-Lithuania) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇱🇹 [Lithuania](https://github.com/Provereno-Media/OSINT-Tools-Lithuania) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇳🇱 [Netherlands](https://github.com/Provereno-Media/OSINT-Tools-Netherlands) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇳🇴 [Norway](https://github.com/Provereno-Media/OSINT-Tools-Norway) | @provereno-media | 📌 Listed | Not recorded |
-| 🇵🇱 [Poland](https://github.com/paulpogoda/OSINT-Tools-Poland) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇵🇱 [Poland](https://github.com/Provereno-Media/OSINT-Tools-Poland) | @9wind @paulpogoda | 📌 Listed | Not recorded |
 | 🇷🇴 [Romania](https://github.com/Provereno-Media/OSINT-Tools-Romania) | @provereno-media | 📌 Listed | Not recorded |
 | 🇷🇸 [Serbia](https://github.com/Provereno-Media/OSINT-Tools-Serbia) | @provereno-media | 📌 Listed | Not recorded |
 | 🇸🇰 [Slovakia](https://github.com/Provereno-Media/OSINT-Tools-Slovakia) | @provereno-media | 📌 Listed | Not recorded |
