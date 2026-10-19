@@ -131,10 +131,10 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 | Country | Maintainer | Status | Last reviewed |
 |---|---|---|---|
 | 🇮🇷 [Iran](https://github.com/pogoda-provereno/OSINT-Tools-Iran) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇮🇶 [Iraq](https://github.com/paulpogoda/OSINT-Tools-Iraq) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇮🇱 [Israel](https://github.com/paulpogoda/OSINT-Tools-Israel) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇸🇦 [Saudi Arabia](https://github.com/paulpogoda/OSINT-Tools-Saudi-Arabia) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇸🇾 [Syria](https://github.com/paulpogoda/OSINT-Tools-Syria) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇮🇶 [Iraq](https://github.com/Provereno-Media/OSINT-Tools-Iraq) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇮🇱 [Israel](https://github.com/Provereno-Media/OSINT-Tools-Israel) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇸🇦 [Saudi Arabia](https://github.com/Provereno-Media/OSINT-Tools-Saudi-Arabia) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇸🇾 [Syria](https://github.com/Provereno-Media/OSINT-Tools-Syria) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇦🇪 [United Arab Emirates](https://github.com/Provereno-Media/OSINT-Tools-Emirates) | @paulpogoda · Provereno | 📌 Listed | Not recorded |
 
 ### South Caucasus
