@@ -44,7 +44,7 @@ The project was inspired by [@wddadk's OSINT for Countries](https://github.com/w
 | 6 | 📋 Public procurement |
 | 7 | 🌐 WHOIS & domain records |
 
-See the [category definitions](STANDARD.md#categories) for scope, inclusion rules and exceptions.
+See the [category definitions](STANDARD.md#categories) for scope, inclusion rules, and exceptions.
 
 ## Quick Start
 
@@ -71,7 +71,7 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 | Country | Maintainer | Status | Last reviewed |
 |---|---|---|---|
 | 🇧🇷 [Brazil](https://github.com/Provereno-Media/OSINT-Tools-Brazil) | Bruno Görresen Mello | 📌 Listed | Not recorded |
-| 🇨🇺 [Cuba](https://github.com/paulpogoda/osint-tools-cuba/tree/main) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇨🇺 [Cuba](https://github.com/Provereno-Media/OSINT-Tools-Cuba) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇺🇸 [United States of America](https://github.com/Provereno-Media/OSINT-Tools_USA) | @paulpogoda · Provereno | 📌 Listed | Not recorded |
 
 ### Asia-Pacific
@@ -80,19 +80,19 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 |---|---|---|---|
 | 🇦🇺 [Australia](https://github.com/Provereno-Media/OSINT-Tools-Australia) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇧🇩 [Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) | Tausif Akbar · Pogoda | 📌 Listed | Not recorded |
-| 🇨🇳 [China](https://github.com/paulpogoda/OSINT-Tools-China) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇨🇳 [China](https://github.com/Provereno-Media/OSINT-Tools-China) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇮🇳 [India](https://github.com/Provereno-Media/OSINT-Tools-India) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇰🇵 [North Korea](https://github.com/paulpogoda/OSINT-Tools-North-Korea) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇰🇵 [North Korea](https://github.com/Provereno-Media/OSINT-Tools-North-Korea) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇹🇼 [Taiwan](https://github.com/Provereno-Media/OSINT-Tools-Taiwan) | @paulpogoda | 📌 Listed | Not recorded |
 
 ### Central Asia
 
 | Country | Maintainer | Status | Last reviewed |
 |---|---|---|---|
-| 🇰🇿 [Kazakhstan](https://github.com/paulpogoda/OSINT-Tools-Kazakhstan) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇰🇬 [Kyrgyzstan](https://github.com/paulpogoda/OSINT-Tools-Kyrgyzstan) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇹🇯 [Tajikistan](https://github.com/paulpogoda/OSINT-Tools-Tajikistan) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇺🇿 [Uzbekistan](https://github.com/paulpogoda/OSINT-Tools-Uzbekistan) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇰🇿 [Kazakhstan](https://github.com/Provereno-Media/OSINT-Tools-Kazakhstan) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇰🇬 [Kyrgyzstan](https://github.com/Provereno-Media/OSINT-Tools-Kyrgyzstan) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇹🇯 [Tajikistan](https://github.com/Provereno-Media/OSINT-Tools-Tajikistan) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇺🇿 [Uzbekistan](https://github.com/Provereno-Media/OSINT-Tools-Uzbekistan) | @paulpogoda | 📌 Listed | Not recorded |
 
 ### Europe
 
@@ -114,7 +114,7 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 | 🇮🇹 [Italy](https://github.com/Provereno-Media/OSINT-Tools-Italy) | @provereno-media | 📌 Listed | Not recorded |
 | 🇱🇻 [Latvia](https://github.com/paulpogoda/OSINT-Tools-Latvia) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇱🇹 [Lithuania](https://github.com/paulpogoda/OSINT-Tools-Lithuania) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇳🇱 [Netherlands](https://github.com/paulpogoda/OSINT-Tools-Netherlands/tree/master) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇳🇱 [Netherlands](https://github.com/Provereno-Media/OSINT-Tools-Netherlands) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇳🇴 [Norway](https://github.com/Provereno-Media/OSINT-Tools-Norway) | @provereno-media | 📌 Listed | Not recorded |
 | 🇵🇱 [Poland](https://github.com/paulpogoda/OSINT-Tools-Poland) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇷🇴 [Romania](https://github.com/Provereno-Media/OSINT-Tools-Romania) | @provereno-media | 📌 Listed | Not recorded |
@@ -124,7 +124,7 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 | 🇪🇸 [Spain](https://github.com/Provereno-Media/OSINT-Tools-Spain) | @provereno-media | 📌 Listed | Not recorded |
 | 🇸🇪 [Sweden](https://github.com/Provereno-Media/OSINT-Tools-Sweden) | @provereno-media | 📌 Listed | Not recorded |
 | 🇨🇭 [Switzerland](https://github.com/Provereno-Media/OSINT-Tools-Switzerland) | @provereno-media | 📌 Listed | Not recorded |
-| 🇬🇧 [United Kingdom](https://github.com/paulpogoda/OSINT-Tools-UK) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇬🇧 [United Kingdom](https://github.com/Provereno-Media/OSINT-Tools-UK) | @paulpogoda | 📌 Listed | Not recorded |
 
 ### Middle East
 
