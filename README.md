@@ -79,7 +79,7 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 | Country | Maintainer | Status | Last reviewed |
 |---|---|---|---|
 | 🇦🇺 [Australia](https://github.com/Provereno-Media/OSINT-Tools-Australia) | @paulpogoda | 📌 Listed | Not recorded |
-| 🇧🇩 [Bangladesh](https://github.com/paulpogoda/OSINT-Tools-Bangladesh) | Tausif Akbar · Pogoda | 📌 Listed | Not recorded |
+| 🇧🇩 [Bangladesh](https://github.com/Provereno-Media/OSINT-Tools-Bangladesh) | Tausif Akbar · Pogoda | 📌 Listed | Not recorded |
 | 🇨🇳 [China](https://github.com/Provereno-Media/OSINT-Tools-China) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇮🇳 [India](https://github.com/Provereno-Media/OSINT-Tools-India) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇰🇵 [North Korea](https://github.com/Provereno-Media/OSINT-Tools-North-Korea) | @paulpogoda | 📌 Listed | Not recorded |
