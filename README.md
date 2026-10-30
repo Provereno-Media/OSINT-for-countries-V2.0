@@ -56,7 +56,7 @@ See the [category definitions](STANDARD.md#categories) for scope, inclusion rule
 
 ## Browse Countries
 
-The index currently lists **55 country repositories**. Inclusion means the repository is indexed—not that every resource has recently been reviewed. **Last reviewed** records an explicit content audit, not a commit date. Dates are unrecorded until maintainers supply evidence; see [Country freshness](STANDARD.md#country-status-and-freshness).
+The index currently lists **56 country repositories**. Inclusion means the repository is indexed—not that every resource has recently been reviewed. **Last reviewed** records an explicit content audit, not a commit date. Dates are unrecorded until maintainers supply evidence; see [Country freshness](STANDARD.md#country-status-and-freshness).
 
 **Jump to:** [Africa](#africa) · [Americas](#americas) · [Asia-Pacific](#asia-pacific) · [Central Asia](#central-asia) · [Europe](#europe) · [Middle East](#middle-east) · [South Caucasus](#south-caucasus) · [Eastern Europe & Eurasia](#eastern-europe--eurasia) · [South & West Asia](#south--west-asia)
 
@@ -135,6 +135,7 @@ The index currently lists **55 country repositories**. Inclusion means the repos
 | 🇮🇱 [Israel](https://github.com/Provereno-Media/OSINT-Tools-Israel) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇸🇦 [Saudi Arabia](https://github.com/Provereno-Media/OSINT-Tools-Saudi-Arabia) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇸🇾 [Syria](https://github.com/Provereno-Media/OSINT-Tools-Syria) | @paulpogoda | 📌 Listed | Not recorded |
+| 🇹🇷 [Türkiye](https://github.com/pogoda-provereno/OSINT-Tools-Turkiye) | @paulpogoda | 📌 Listed | Not recorded |
 | 🇦🇪 [United Arab Emirates](https://github.com/Provereno-Media/OSINT-Tools-Emirates) | @paulpogoda · Provereno | 📌 Listed | Not recorded |
 
 ### South Caucasus
